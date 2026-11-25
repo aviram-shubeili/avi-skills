@@ -10,7 +10,14 @@ My agent skills for Claude Code, GitHub Copilot CLI, and any other agent that re
 
 ## Install
 
-Copy a skill folder into your agent's skills directory:
+With the [skills CLI](https://github.com/vercel-labs/skills) (Node.js 22.20+):
+
+```bash
+npx skills add aviram-shubeili/avi-skills        # this project
+npx skills add aviram-shubeili/avi-skills -g     # all projects
+```
+
+Or copy a skill folder into your agent's skills directory by hand:
 
 ```bash
 # Claude Code (all projects)
