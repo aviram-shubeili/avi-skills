@@ -13,6 +13,7 @@ Skills that shape how an agent takes on a task.
 | Skill | What it does |
 | --- | --- |
 | [clean-context](skills/agent-workflow/clean-context/SKILL.md) | Takes a raw idea or prompt dump (dictation, notes, images), removes your ideas about *how* to solve it, gives the clean brief to a blind sub-agent, and then cross-checks the agent's result against your original ideas. |
+| [review-feedback-loop](skills/agent-workflow/review-feedback-loop/SKILL.md) | Learns evidence-backed code-quality lessons from human PR feedback, keeps resumable state per repository, and independently reviews and repairs agent-authored draft PRs before human handoff. |
 
 ### Product
 

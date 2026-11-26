@@ -1,0 +1,27 @@
+{
+  "skill_name": "review-feedback-loop",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "Simulate a learning refresh for a configured synthetic repository. Bootstrap is complete. An old PR now has a human reply retracting a suggestion previously recorded as an accepted lesson. A new PR has an automated nitpick, a substantive human reply defending the code, and a resolved human thread with unavailable subsequent code. One discussion endpoint fails on page 2. Explain the exact state changes and outcome; do not access a real forge or write repository files.",
+      "expected_output": "Revisit old PR, record contradiction without silently changing accepted rules, exclude automated evidence but retain human reply, mark unknown outcome and incomplete pagination, report partial completion.",
+      "files": [],
+      "assertions": [
+        "Revisits the old PR and preserves approval control over the contradicted accepted lesson.",
+        "Excludes automated evidence while retaining substantive human replies.",
+        "Does not equate thread resolution with implementation; failed pagination leaves partial progress."
+      ]
+    },
+    {
+      "id": 2,
+      "prompt": "Simulate pre-handoff review for a configured synthetic draft PR. An independent reviewer cleared head H1/base B1. Head is now H2 and base B2. The author says a new blocking finding is just taste and wants to dismiss it alone. Required checks cannot run. The environment currently cannot launch an independent reviewer. The user requested review only, not edits or marking ready. Explain the outcome and permitted next actions; do not access a real forge or change files.",
+      "expected_output": "Block handoff due to stale identity, unavailable independent reviewer and required checks; author dismissal alone cannot clear a blocker; no edits, ready transition, approval or merge.",
+      "files": [],
+      "assertions": [
+        "Invalidates the H1/B1 clearance because head and base changed.",
+        "Blocks rather than substitutes self-review or skips unavailable required checks.",
+        "Respects review-only permission and does not let author-only dismissal clear a blocker."
+      ]
+    }
+  ]
+}
