@@ -13,8 +13,15 @@ Skills that shape how an agent takes on a task.
 | Skill | What it does |
 | --- | --- |
 | [clean-context](skills/agent-workflow/clean-context/SKILL.md) | Takes a raw idea or prompt dump (dictation, notes, images), removes your ideas about *how* to solve it, gives the clean brief to a blind sub-agent, and then cross-checks the agent's result against your original ideas. |
-| [clean-restart](skills/agent-workflow/clean-restart/SKILL.md) | Throws away a sloppy implementation and rebuilds it: distills the spec, standards and lessons learned (as facts, not workarounds) into a clean brief, has a fresh agent re-implement it blind from the base commit, then compares old vs. new. |
 | [review-feedback-loop](skills/agent-workflow/review-feedback-loop/SKILL.md) | Learns evidence-backed code-quality lessons from human PR feedback, keeps resumable state per repository, and independently reviews and repairs agent-authored draft PRs before human handoff. |
+
+### Engineering
+
+Skills for writing and keeping maintainable code.
+
+| Skill | What it does |
+| --- | --- |
+| [clean-restart](skills/engineering/clean-restart/SKILL.md) | Throws away a sloppy implementation and rebuilds it: distills the spec, standards and lessons learned (as facts, not workarounds) into a clean brief, has a fresh agent re-implement it blind from the base commit, then compares old vs. new. |
 
 ### Product
 
